@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<title>Soutenance de projet</title>
+
+
+	<!-- Don't alter this, CSSS needs it to work -->
+	<link href="csss/css/slideshow.css" rel="stylesheet" />
+
+	<!-- Theme-specific styles go here (themes can be reused in multiple talks) -->
+	<link href="csss/css/theme.css" rel="stylesheet" />
+
+	<!-- Talk-specific styles go here -->
+	<link href="csss/css/talk.css" rel="stylesheet" />
+
+	<!-- Magador added css -->
+	<link href="style.css" rel="stylesheet" />
+
+	<!-- Take care of prefixes -->
+	<script src="csss/js/prefixfree.min.js"></script>
+</head>
+<body data-duration="15">
+	<header id="title" class="slide">
+		<figure>
+			<figcaption>PSA and DSIN logos</figcaption>
+		</figure>
+		<h3 class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</h3>
+		<h1>Nouvel écran d’enrichissement unique de l’application DEPIL</h1>
+		<h2 class="course"><span>Soutenance de projet ST72 - 2015</span><span id="today"></span></h2>
+		<section class="people">
+			<address class="author">
+				<p class="name">Jean-Baptiste Lenglet</p>
+				<p class="department">Département Génie Informatique</p>
+				<p class="class">Informatique pour l’ingénierie des systèmes d’information</p>
+			</address>
+			<p class="tutor">Tuteur en entreprise: Florent Bruel</p>
+			<p class="tutor">Suiveur académique: Gordon Glenny</p>
+		</section>
+		<footer class="slide-footer">
+			<img class="item" src="img/Utbm.png" alt="UTBM Logo" />
+			<img class="item" src="img/ITII.jpg" alt="ITII Logo"/>
+			<img class="item" src="img/CFAI.png" alt="CFAI Logo"/>
+		</footer>
+	</header>
+	<section>
+		<header class="slide section-title">
+			<main class="content">
+				<figure>
+					<figcaption>PSA and DSIN logos</figcaption>
+				</figure>
+				<h3 class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</h3>
+				<h1>Nouvel écran d’enrichissement unique</h1>
+			</main>
+			<footer class="slide-footer">
+				<img class="item" src="img/Utbm.png" alt="UTBM Logo" />
+				<img class="item" src="img/ITII.jpg" alt="ITII Logo"/>
+				<img class="item" src="img/CFAI.png" alt="CFAI Logo"/>
+			</footer>
+		</header>
+		<section class="slide section-slide">
+			<header class="slide-header">
+				<figure>
+					<figcaption>PSA and DSIN logos</figcaption>
+				</figure>
+				<h3 class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</h3>
+				<h2>Section title</h2>
+			</header>
+			<main>
+			</main>
+			<footer>ST72 - Nouvel écran d’enrichissement unique de l’application DEPIL - Jean-Baptiste Lenglet</footer>
+		</section>
+	</section>
+	<footer class="slide thanks-slide">
+		<header class="slide-header">
+			<h3 class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</h3>
+			<h1>Merci de votre attention</h1>
+			<figure>
+				<figcaption>PSA and DSIN logos</figcaption>
+			</figure>
+		</header>
+		<footer class="slide-footer">
+			<img class="item" src="img/Utbm.png" alt="UTBM Logo" />
+			<img class="item" src="img/ITII.jpg" alt="ITII Logo"/>
+			<img class="item" src="img/CFAI.png" alt="CFAI Logo"/>
+		</footer>
+	</footer>
+	<script src="csss/js/slideshow.js"></script>
+
+
+	<!-- Uncomment the plugins you need
+	<script src="plugins/css-edit.js"></script>
+	<script src="plugins/css-snippets.js"></script>
+	<script src="plugins/css-controls.js"></script>
+	<script src="plugins/code-highlight.js"></script>
+	-->
+	<script>
+	document.getElementById('today').textContent = (new Date).toLocaleDateString('fr-FR', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'});
+
+
+	var slideshow = new SlideShow();
+
+	setTimeout(function() {
+		var css = document.styleSheets[3],
+			slideLen = document.getElementsByClassName("slide").length;
+		css.insertRule("#indicator::after {content:\" / "+slideLen+"\"}", css.cssRules.length);
+	}, 1000);
+
+	/*var snippets = document.querySelectorAll('.snippet');
+	for(var i=0; i<snippets.length; i++) {
+		new CSSSnippet(snippets[i]);
+	}
+
+	var cssControls = document.querySelectorAll('.css-control');
+	for(var i=0; i<cssControls.length; i++) {
+		new CSSControl(cssControls[i]);
+	}*/
+	</script>
+</body>
+</html>
