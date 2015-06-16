@@ -30,6 +30,9 @@ html {
 /* Figure Default style */
 figure {
 	background: center center / contain no-repeat;
+
+	/*Transitions defaults*/
+	width: 100%;
 }
 
 figcaption {
@@ -78,6 +81,9 @@ h3.college {
 	font-size: 3vh;
 	color: white;
 	font-variant: small-caps;
+
+	/*Transitions defaults*/
+	width: 100%;
 }
 
 .college strong::after {
@@ -95,6 +101,11 @@ h1 {
 	font-size: 5vh;
 	line-height: 5vh;
 	font-weight: bold;
+
+	/* Transitions defaults */
+	width: 100%;
+	color: white;
+	text-shadow: .05em .05em .1em rgba(0,0,0,.4);
 }
 
 /* List style */
@@ -142,11 +153,17 @@ li li::before {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
+
+	/*Transitions defaults*/
+	width: 100%;
 }
 
 .presentation-title figure {
 
 	height: 25vh;
+
+	/* Transitions defaults */
+	margin-top: 0vh;
 }
 
 .presentation-title section {
@@ -156,6 +173,9 @@ li li::before {
 	padding: 5vh 5vw;
 
 	color: black;
+
+	/*Transitions defaults*/
+	opacity: 1;
 }
 
 .presentation-title address .name {
@@ -292,4 +312,89 @@ li li::before {
 	height: 35vh;
 }
 
-/*  */
+/* Behavioral Style */
+
+ 
+.slide {
+	display: block; /*none*/
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:1;
+
+	opacity: 0;
+
+	font-size:250%;
+	line-height:1.6;
+
+	transition: visibility 0s .5s;
+}
+ 
+ .slide.previous,
+ .slide:target,
+ .slide.next {
+	display: block;
+	visibility: hidden;
+ 	opacity:1;
+	overflow:hidden;
+ }
+ 
+ .slide:target {
+ 	z-index:100;
+ 	opacity:1;
+ 	visibility: visible;
+ 	overflow: visible;
+}
+/* Presentation Title */
+
+/* Entered */
+
+/* Exit */
+
+.presentation-title:not(:target) header figure,
+.presentation-title:not(:target) header .college,
+.presentation-title:not(:target) header h1,
+.presentation-title:not(:target) header .course,
+.presentation-title:not(:target) section {
+	transition: all .5s;
+}
+
+/* to Part Title */
+
+.presentation-title:not(:target) header figure {
+	margin-top: 20vh;
+}
+
+.presentation-title:not(:target) header figure,
+.presentation-title:not(:target) header .college,
+.presentation-title:not(:target) header h1,
+.presentation-title:not(:target) header .course {
+	width: 80%;
+}
+
+.presentation-title:not(:target) header h1,
+.part-title:not(:target) header h1 {
+	color: #7D5C8B;
+	text-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.presentation-title:not(:target) header .course {
+	height: 0;
+	overflow: hidden;
+}
+
+.presentation-title:not(:target) section {
+    opacity: 0;
+}
+
+.part-title:target header h1 {
+	transition: color .5s .5s, text-shadow .5s .5s;
+}
+
+/* Part Title to Presentation Title */
+
+.part-title:not(:target) header h1 {
+	transition: all .5s;
+}
