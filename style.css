@@ -14,10 +14,6 @@ html {
 	border: none;
 }
 
-section > header.slide {
-	background-color: inherit;
-}
-
 /* Timer style */
 
 #timer {
@@ -40,9 +36,16 @@ figcaption {
 	visibility: hidden;
 }
 
+/* Title Slides Figures */
+
+[class*="-title"] header figure {
+	background-image: url("img/PSA_DSIN.png");
+	background-color: white;
+}
+
 /* Slide Footer */
 
-footer.slide-footer {
+[class*="-title"] footer {
 	background-color: white;
 
 	position: absolute;
@@ -59,7 +62,7 @@ footer.slide-footer {
 	align-content: center;
 }
 
-.slide-footer .item {
+[class*="-title"] footer img {
 	height: 8vh;
 }
 
@@ -94,16 +97,39 @@ h1 {
 	font-weight: bold;
 }
 
-/* Title Slide */
+/* List style */
 
-#title figure {
-	background-image: url("img/PSA_DSIN.png");
-	background-color: white;
-
-	height: 25vh;
+ul {
+	list-style: none;
 }
 
-#title h2.course {
+.slide li {
+	margin: .1vh;
+}
+
+ul > li::before {
+	content:'\2714';
+	color: #a0c12c;
+	padding-right: .2em;
+}
+
+ul ul {
+	margin-left:2em;
+}
+
+li li::before {
+	content: '\279C';
+	color: #28bcbc;
+}
+
+/* Presentation Title */
+
+#today {
+	display: inline-block;
+	font-variant: small-caps;
+}
+
+.presentation-title h2.course {
 	background-color: #4f4e55;
 
 	height: 5vh;
@@ -118,12 +144,12 @@ h1 {
 	justify-content: space-between;
 }
 
-#today {
-	display: inline-block;
-	font-variant: small-caps;
+.presentation-title figure {
+
+	height: 25vh;
 }
 
-#title .people {
+.presentation-title section {
 	background-color: #d9d957;
 
 	height: 35vh;
@@ -132,25 +158,21 @@ h1 {
 	color: black;
 }
 
-.people .author {
-
-}
-
-.author .name {
+.presentation-title address .name {
 	height: 6vh;
 
 	line-height: 6vh;
 	font-size: 4vh;
 }
 
-.author .department {
+.presentation-title address .department {
 	height: 2vh;
 
 	line-height: 2vh;
 	font-size: 2vh;
 }
 
-.author .class {
+.presentation-title address .class {
 	height: 2vh;
 
 	line-height: 2vh;
@@ -158,7 +180,7 @@ h1 {
 	color: #666666;
 }
 
-.people .tutor {
+.presentation-title section .tutor {
 	height: 3vh;
 	margin-top: 2vh;
 
@@ -167,36 +189,38 @@ h1 {
 
 }
 
-/* Section title */
+/* Part Title */
 
-section > header.slide {
+.part-title {
 	background-color: #d9d957;
 }
 
-.section-title .content {
-	width: 80vw;
-	height: 50vh;
+.part-title header {
 	margin-top: 20vh;
+	height: 50vh;
+	width: 80vw;
 }
 
-.section-title figure {
-	background-image: url("img/PSA_DSIN.png");
-	background-color: white;
-
+.part-title figure {
 	height: 25vh;
 }
 
-/* Normal slide */
+.part-title h1 {
+	font-size: 5vh;
+    line-height: 5vh;
+    font-weight: bold;
+}
 
-.section-slide header.slide-header {
+/* Part Slide */
+
+.part-slide header {
 	background-color: white;
 
 	height: 25vh;
 	padding: 5vh 0;
 }
 
-.section-slide .slide-header figure {
-	background-image: url("img/PSA_DSIN.png");
+.part-slide header figure {
 	background-color: white;
 
 	position: absolute;
@@ -207,19 +231,14 @@ section > header.slide {
 	height: 25vh;
 }
 
-.section-slide .slide-header figure img {
+.part-slide header figure img {
 	max-height: 100%;
 	max-width: 100%;
 }
 
-.section-slide .slide-header .college {
-	width: 75vw;
-}
-
-.section-slide .slide-header h2 {
+.part-slide h2 {
 	background-color: #7D5C8B;
 
-	width: 75vw;
 	height: 10vh;
 	padding: 2vh 5vw;
 
@@ -227,15 +246,24 @@ section > header.slide {
 	font-size: 6vh;
 }
 
-.section-slide main {
+.part-slide section {
 	background-color: white;
 
 	height: 70vh;
+	padding: 0 5vw;
+
+	color: black;
+	text-align: justify;
+	line-height: 4vh;
+	font-size: 3vh;
 }
 
-.section-slide footer {
+.part-slide footer {
 	background-color: #d9d957;
 
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
 	height: 5vh;
 	padding: 1vh 5vw;
 
@@ -246,22 +274,22 @@ section > header.slide {
 
 /* Thanks slide */
 
-.slide.thanks-slide {
+.thanks-title {
 
 }
 
-.thanks-slide header.slide-header {
+.thanks-title header {
 	height: 70vh;
 	padding-top: 5vh;
 }
 
-.thanks-slide .slide-header figure {
-	background-image: url("img/PSA_DSIN.png");
-	background-color: white;
-
-	height: 40vh;
+.thanks-title h1 {
+	font-size: 6vh;
+	line-height: 7vh;
 }
 
-.thanks-slide footer {
-	margin-top: 20vh;
+.thanks-title figure {
+	height: 35vh;
 }
+
+/*  */
