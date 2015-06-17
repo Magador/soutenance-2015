@@ -32,7 +32,7 @@ figure {
 	background: center center / contain no-repeat;
 
 	/*Transitions defaults*/
-	width: 100%;
+	/*width: 100%;*/
 }
 
 figcaption {
@@ -41,14 +41,18 @@ figcaption {
 
 /* Title Slides Figures */
 
-[class*="-title"] header figure {
+.presentation-title header figure,
+.part-title header figure,
+.thanks-title header figure {
 	background-image: url("img/PSA_DSIN.png");
 	background-color: white;
 }
 
 /* Slide Footer */
 
-[class*="-title"] footer {
+.presentation-title footer,
+.part-title footer,
+.thanks-title footer {
 	background-color: white;
 
 	position: absolute;
@@ -83,7 +87,7 @@ h3.college {
 	font-variant: small-caps;
 
 	/*Transitions defaults*/
-	width: 100%;
+	/*width: 100%;*/
 }
 
 .college strong::after {
@@ -103,7 +107,7 @@ h1 {
 	font-weight: bold;
 
 	/* Transitions defaults */
-	width: 100%;
+	/*width: 100%;*/
 	color: white;
 	text-shadow: .05em .05em .1em rgba(0,0,0,.4);
 }
@@ -140,6 +144,11 @@ li li::before {
 	font-variant: small-caps;
 }
 
+.presentation-title header {
+	/* Transisiton defaults */
+	width: 100%
+}
+
 .presentation-title h2.course {
 	background-color: #4f4e55;
 
@@ -153,9 +162,6 @@ li li::before {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-
-	/*Transitions defaults*/
-	width: 100%;
 }
 
 .presentation-title figure {
@@ -219,6 +225,18 @@ li li::before {
 	margin-top: 20vh;
 	height: 50vh;
 	width: 80vw;
+
+	/*Transitions defaults*/
+	border-bottom: 0vh solid #4f4e55;
+	box-sizing: content-box;
+}
+
+.part-title.from-presentation-title header::after {
+	content: "";
+	position: absolute;
+	width: 80vw;
+	height: 0vh;
+	background-color: #4f4e55;
 }
 
 .part-title figure {
@@ -317,17 +335,8 @@ li li::before {
  
 .slide {
 	display: block; /*none*/
-	position:absolute;
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
-	z-index:1;
 
 	opacity: 0;
-
-	font-size:250%;
-	line-height:1.6;
 
 	transition: visibility 0s .5s;
 }
@@ -335,66 +344,59 @@ li li::before {
  .slide.previous,
  .slide:target,
  .slide.next {
-	display: block;
-	visibility: hidden;
  	opacity:1;
-	overflow:hidden;
  }
- 
- .slide:target {
- 	z-index:100;
- 	opacity:1;
- 	visibility: visible;
- 	overflow: visible;
-}
-/* Presentation Title */
 
-/* Entered */
+/* Transitions */
 
-/* Exit */
-
-.presentation-title:not(:target) header figure,
-.presentation-title:not(:target) header .college,
-.presentation-title:not(:target) header h1,
-.presentation-title:not(:target) header .course,
-.presentation-title:not(:target) section {
+.slide:not(:target) * {
 	transition: all .5s;
 }
 
-/* to Part Title */
-
-.presentation-title:not(:target) header figure {
+.presentation-title.to-part-title:not(:target) figure {
 	margin-top: 20vh;
 }
 
-.presentation-title:not(:target) header figure,
-.presentation-title:not(:target) header .college,
-.presentation-title:not(:target) header h1,
-.presentation-title:not(:target) header .course {
+.presentation-title.to-part-title:not(:target) header {
 	width: 80%;
 }
 
-.presentation-title:not(:target) header h1,
-.part-title:not(:target) header h1 {
-	color: #7D5C8B;
+.presentation-title:not(:target) h1,
+.presentation-title:not(:target) .course,
+.presentation-title:not(:target) section,
+.presentation-title:not(:target) section .class,
+.part-title:not(:target) h1 {
+	color: rgba(0,0,0,0);
 	text-shadow: 0 0 0 rgba(0,0,0,0);
 }
 
-.presentation-title:not(:target) header .course {
+.presentation-title:target h1,
+.presentation-title:target .course,
+.presentation-title:target section,
+.presentation-title:target section .class,
+.part-title:target h1 {
+	transition: color .5s .5s, text-shadow .5s .5s;
+}
+
+.presentation-title.to-part-title:not(:target) .course {
 	height: 0;
 	overflow: hidden;
 }
 
-.presentation-title:not(:target) section {
+.presentation-title.to-part-title:not(:target) section {
     opacity: 0;
-}
-
-.part-title:target header h1 {
-	transition: color .5s .5s, text-shadow .5s .5s;
 }
 
 /* Part Title to Presentation Title */
 
-.part-title:not(:target) header h1 {
-	transition: all .5s;
+.part-title.from-presentation-title.next header {
+	width: 100vw;
+	margin-top: 0vh;
+	border-bottom: 5vh solid #4f4e55;
+}
+
+.part-title.from-presentation-title.next header::after {
+	width: 100vw;
+	height: 5vh;
+	transition: width .5s, height .5s;
 }
