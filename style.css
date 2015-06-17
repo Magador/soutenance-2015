@@ -45,7 +45,7 @@ figcaption {
 
 .presentation-title header figure,
 .part-title header figure,
-.thanks-title header figure {
+.thanks-slide header figure {
 	background-image: url("img/PSA_DSIN.png");
 	background-color: white;
 }
@@ -54,7 +54,7 @@ figcaption {
 
 .presentation-title footer,
 .part-title footer,
-.thanks-title footer {
+.thanks-slide footer {
 	background-color: white;
 
 	position: absolute;
@@ -73,14 +73,14 @@ figcaption {
 
 .presentation-title footer img,
 .part-title footer img,
-.thanks-title footer img {
+.thanks-slide footer img {
 	height: 8vh;
 	opacity: 1;
 }
 
 /* College Ribbon */
 
-h3.college {
+aside.college {
 	height: 5vh;
 	padding-left: 5vw;
 
@@ -236,14 +236,6 @@ li li::before {
 	box-sizing: content-box;
 }
 
-.part-title.from-presentation-title header::after {
-	content: "";
-	position: absolute;
-	width: 80vw;
-	height: 0vh;
-	background-color: #4f4e55;
-}
-
 .part-title figure {
 	height: 25vh;
 }
@@ -252,6 +244,22 @@ li li::before {
 	font-size: 5vh;
     line-height: 5vh;
     font-weight: bold;
+}
+
+.part-title.from-presentation-title header::after {
+	content: "";
+	position: absolute;
+	width: 80vw;
+	height: 0vh;
+	background-color: #4f4e55;
+}
+
+.part-title.to-thanks-slide header::after {
+	content: "";
+	display: block;
+	height: 0vh;
+	width: 80vw;
+	background: url("img/PSA_DSIN.png") center center / contain no-repeat white;
 }
 
 /* Part Slide */
@@ -347,32 +355,41 @@ li li::before {
 
 /* Thanks slide */
 
-.thanks-title {
+.thanks-slide {
 
 }
 
-.thanks-title header {
+.thanks-slide header {
 	height: 70vh;
-}
-
-.thanks-title header::before {
-	content: "";
-	display: block;
-	height: 5vh;
 	width: 100vw;
-	opacity: 0;
-	background: url("img/PSA_DSIN.png") no-repeat white;
-	background-position: left center;
-	background-size: contain;
+	margin-top: 5vh;
 }
 
-.thanks-title h1 {
+.thanks-slide h1 {
 	font-size: 6vh;
 	line-height: 7vh;
 }
 
-.thanks-title figure {
+.thanks-slide figure {
 	height: 40vh;
+}
+
+.thanks-slide.from-part-title header::before {
+	content: "";
+	display: block;
+	height: 0vh;
+	width: 100vw;
+	background: url("img/PSA_DSIN.png") center center / contain no-repeat white;
+}
+
+.thanks-slide.from-part-slide header::before {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 5vh;
+	width: 100vw;
+	opacity: 0;
+	background: url("img/PSA_DSIN.png") left center / contain no-repeat white;
 }
 
 
@@ -423,7 +440,7 @@ li li::before {
 .part-slide:not(:target) h2,
 .part-slide:not(:target) footer,
 
-.thanks-title:not(:target) h1 {
+.thanks-slide:not(:target) h1 {
 	color: rgba(0,0,0,0);
 	text-shadow: 0 0 0 rgba(0,0,0,0);
 }
@@ -438,7 +455,7 @@ li li::before {
 .part-slide:target h2,
 .part-slide:target footer,
 
-.thanks-title:target h1 {
+.thanks-slide:target h1 {
 	transition: color .5s .5s, text-shadow .5s .5s;
 }
 
@@ -461,6 +478,37 @@ li li::before {
     opacity: 0;
 }
 
+.presentation-title.to-part-slide.previous {
+	background-color: white;
+}
+
+.presentation-title.to-part-slide.previous figure {
+	height: 5vh;
+	background-position: left center;
+}
+
+.presentation-title.to-part-slide.previous h1 {
+	height: 10vh;
+}
+
+.presentation-title.to-part-slide.previous .course {
+	height: 0;
+	overflow: hidden;
+}
+
+.presentation-title.to-part-slide.previous section {
+    opacity: 0;
+}
+
+.presentation-title.to-part-slide.previous footer {
+	height: 5vh;
+	background-color: #d9d957;
+}
+
+.presentation-title.to-part-slide.previous footer img {
+	height: 3vh;
+}
+
 /*Part Title*/
 
 .part-title.from-presentation-title.next header {
@@ -475,31 +523,52 @@ li li::before {
 	transition: width .5s, height .5s;
 }
 
-.part-title.to-part-slide.previous {
+.part-title.to-part-slide.previous,
+.part-title.from-part-slide.next {
 	background-color: white;
 }
 
-.part-title.to-part-slide.previous header {
+.part-title.to-part-slide.previous header,
+.part-title.from-part-slide.next header {
 	margin-top: 0vh;
 	width: 100vw;
 }
 
-.part-title.to-part-slide.previous figure {
+.part-title.to-part-slide.previous figure,
+.part-title.from-part-slide.next figure {
 	height: 5vh;
 	background-position: left center;
 }
 
-.part-title.to-part-slide.previous h1 {
+.part-title.to-part-slide.previous h1,
+.part-title.from-part-slide.next h1 {
 	height: 10vh;
 }
 
-.part-title.to-part-slide.previous footer {
+.part-title.to-part-slide.previous footer,
+.part-title.from-part-slide.next footer {
 	height: 5vh;
 	background-color: #d9d957;
 }
 
-.part-title.to-part-slide.previous footer img {
+.part-title.to-part-slide.previous footer img,
+.part-title.from-part-slide.next footer img {
 	height: 3vh;
+}
+
+.part-title.to-thanks-slide.previous header {
+	margin-top: 5vh;
+	width: 100vw;
+}
+
+.part-title.to-thanks-slide.previous figure {
+	height: 0;
+}
+
+.part-title.to-thanks-slide.previous header::after {
+	height: 40vh;
+	width: 100vw;
+	transition: height .5s, width .5s;
 }
 
 /*Part Slide*/
@@ -526,23 +595,10 @@ li li::before {
 	transition: opacity .5s .5s;
 }
 
-.part-slide.from-part-title.next header {
-	margin-top: 20vh;
-	width: 80vw;
-	background-color: #d9d957;
-}
-
-.part-slide.from-part-title.next header::before {
-	width: 80vw;
-	height: 25vh;
-	background-position: center center;
-	transition: width .5s, height .5s, background-position .5s;
-}
-
 .part-slide.from-presentation-title.next footer,
 .part-slide.from-part-title.next footer,
 .part-slide.to-part-title.previous footer,
-.part-slide.to-thanks-title.previous footer {
+.part-slide.to-thanks-slide.previous footer {
 	height: 10vh;
 	background-color: white;
 }
@@ -550,48 +606,96 @@ li li::before {
 .part-slide.from-presentation-title.next h2,
 .part-slide.from-part-title.next h2,
 .part-slide.to-part-title.previous h2,
-.part-slide.to-thanks-title.previous h2 {
+.part-slide.to-thanks-slide.previous h2 {
 	height: 20vh;
 }
 
-.part-slide.to-thanks-title.previous header::before {
+.part-slide.from-presentation-title.next header::before {
+	height: 25vh;
+	background-position: center center;
+	transition: height .5s, background-position .5s;
+}
+
+.part-slide.from-presentation-title.next header::after {
+	background-image: none;
+	background-color: #666666;
+	height: 5vh;
+	transition: height .5s;
+}
+
+.part-slide.from-part-title.next header,
+.part-slide.to-part-title.previous header {
+	margin-top: 20vh;
+	width: 80vw;
+	background-color: #d9d957;
+}
+
+.part-slide.from-part-title.next header::before,
+.part-slide.to-part-title.previous header::before {
+	width: 80vw;
+	height: 25vh;
+	background-position: center center;
+	transition: width .5s, height .5s, background-position .5s;
+}
+
+.part-slide.from-part-slide.next,
+.part-slide.to-part-slide.previous {
+	background-color: white;
+}
+
+.part-slide.to-thanks-slide.previous header::before {
 	opacity: 0;
 	transition: opacity .5s;
 }
 
-.part-slide.to-thanks-title.previous header {
+.part-slide.to-thanks-slide.previous header {
 	background-color: #d9d957;
 }
 
-.part-slide.to-thanks-title.previous header::after {
+.part-slide.to-thanks-slide.previous header::after {
 	height: 40vh;
 	transition: height .5s;
 }
 
 /*Thanks Title*/
 
-.thanks-title.from-part-slide.next {
+.thanks-slide.from-part-title.next header {
+	width: 80vw;
+	margin-top: 20vh;
+}
+
+.thanks-slide.from-part-title.next figure{
+	height: 0;
+}
+
+.thanks-slide.from-part-title.next header::before {
+	height: 25vh;
+	width: 80vw;
+	transition: height .5s, width .5s;
+}
+
+.thanks-slide.from-part-slide.next {
 	background-color: white;
 }
 
-.thanks-title.from-part-slide.next header::before {
+.thanks-slide.from-part-slide.next header::before {
 	opacity: 1;
 	transition: opacity .5s;
 }
 
-.thanks-title.from-part-slide.next h1 {
+.thanks-slide.from-part-slide.next h1 {
 	height: 10vh;
 }
 
-.thanks-title.from-part-slide.next figure {
+.thanks-slide.from-part-slide.next figure {
 	height: 0
 }
 
-.thanks-title.from-part-slide.next footer {
+.thanks-slide.from-part-slide.next footer {
 	height: 5vh;
 	background-color: #d9d957;
 }
 
-.thanks-title.from-part-slide.next footer img {
+.thanks-slide.from-part-slide.next footer img {
 	height: 3vh;
 }

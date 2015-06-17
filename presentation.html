@@ -24,12 +24,10 @@
 </head>
 <body data-duration="15">
 
-	<article class="slide presentation-title to-part-title" title="Soutenance de projet ST72 - 2015 - Jean-Baptiste LENGLET">
+	<article class="slide presentation-title">
 		<header>
-			<figure>
-				<figcaption>PSA and DSIN logos</figcaption>
-			</figure>
-			<h3 class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</h3>
+			<figure></figure>
+			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
 			<h1>Nouvel écran d’enrichissement unique de l’application DEPIL</h1>
 			<h2 class="course"><span>Soutenance de projet ST72 - 2015</span><span id="today"></span></h2>
 		</header>
@@ -49,12 +47,30 @@
 		</footer>
 	</article>
 
-	<article class="slide part-title from-presentation-title to-part-slide">
+	<article class="slide part-slide">
 		<header>
-			<figure>
-				<figcaption>PSA and DSIN logos</figcaption>
-			</figure>
-			<h3 class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</h3>
+			<figure></figure>
+			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
+			<h2>Sommaire</h2>
+		</header>
+		<section>
+			<ul>
+				<li>Lorem ipsum </li>
+				<li>sit amet
+					<ul>
+						<li>consectetur adipiscing</li>
+						<li>igula a</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<footer>ST72 - Nouvel écran d’enrichissement unique de l’application DEPIL - Jean-Baptiste Lenglet</footer>
+	</article>
+
+	<article class="slide part-title">
+		<header>
+			<figure></figure>
+			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
 			<h1>Part Title</h1>
 		</header>
 		<footer>
@@ -64,12 +80,10 @@
 		</footer>
 	</article>
 
-	<article class="slide part-slide from-part-title to-thanks-title">
+	<article class="slide part-slide">
 		<header>
-			<figure>
-				<figcaption>Image caption</figcaption>
-			</figure>
-			<h3 class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</h3>
+			<figure></figure>
+			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
 			<h2>Section title</h2>
 		</header>
 		<section>
@@ -87,13 +101,45 @@
 		<footer>ST72 - Nouvel écran d’enrichissement unique de l’application DEPIL - Jean-Baptiste Lenglet</footer>
 	</article>
 
-	<article class="slide thanks-title from-part-slide">
+	<article class="slide part-slide">
 		<header>
-			<h3 class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</h3>
+			<figure></figure>
+			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
+			<h2>Section title</h2>
+		</header>
+		<section>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed justo at ligula accumsan hendrerit maximus et nisi. Nam eget ultricies augue, sit amet luctus enim. Maecenas ac blandit quam. Nulla at sollicitudin mi, sit amet condimentum tortor. Vivamus fringilla sapien pulvinar.</p>
+			<ul>
+				<li>Lorem ipsum </li>
+				<li>sit amet
+					<ul>
+						<li>consectetur adipiscing</li>
+						<li>igula a</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<footer>ST72 - Nouvel écran d’enrichissement unique de l’application DEPIL - Jean-Baptiste Lenglet</footer>
+	</article>
+
+	<article class="slide part-title">
+		<header>
+			<figure></figure>
+			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
+			<h1>Part Title</h1>
+		</header>
+		<footer>
+			<img src="img/Utbm.png" alt="UTBM Logo" />
+			<img src="img/ITII.jpg" alt="ITII Logo"/>
+			<img src="img/CFAI.png" alt="CFAI Logo"/>
+		</footer>
+	</article>
+
+	<article class="slide thanks-slide">
+		<header>
+			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
 			<h1>Merci de votre attention</h1>
-			<figure>
-				<figcaption>PSA and DSIN logos</figcaption>
-			</figure>
+			<figure></figure>
 		</header>
 		<footer>
 			<img src="img/Utbm.png" alt="UTBM Logo" />
@@ -114,8 +160,23 @@
 	<script src="plugins/code-highlight.js"></script>
 	-->
 	<script>
-	document.getElementById('today').textContent = (new Date).toLocaleDateString('fr-FR', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'});
+	document.getElementById('today').textContent = (new Date).toLocaleDateString('fr-FR', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'});	
 
+	(function() {
+		var slides = document.getElementsByClassName("slide"),
+			classes = [];
+
+		for(var i = 0; i < slides.length; i++) {
+			classes[i] = slides[i].classList[1];
+		}
+
+		for(var i = 0; i < classes.length; i++) {
+			if (classes[i-1])
+				slides[i].classList.add("from-" + classes[i-1]);
+			if (classes[i+1])
+				slides[i].classList.add("to-" + classes[i+1]);
+		}
+	})();
 
 	var slideshow = new SlideShow();
 
