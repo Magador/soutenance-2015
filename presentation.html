@@ -55,13 +55,11 @@
 		</header>
 		<section>
 			<ul>
-				<li>Lorem ipsum </li>
-				<li>sit amet
-					<ul>
-						<li>consectetur adipiscing</li>
-						<li>igula a</li>
-					</ul>
-				</li>
+				<li>Présentation de l'entreprise</li>
+				<li>Présentation du contexte</li>
+				<li>Présentation du sujet</li>
+				<li>Démarche, Outils</li>
+				<li>Résultats obtenus</li>
 			</ul>
 		</section>
 		<footer>ST72 - Nouvel écran d’enrichissement unique de l’application DEPIL - Jean-Baptiste Lenglet</footer>
@@ -71,7 +69,7 @@
 		<header>
 			<figure></figure>
 			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
-			<h1>Part Title</h1>
+			<h1>Présentation de l'entreprise</h1>
 		</header>
 		<footer>
 			<img src="img/Utbm.png" alt="UTBM Logo" />
@@ -84,42 +82,24 @@
 		<header>
 			<figure></figure>
 			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
-			<h2>Section title</h2>
+			<h2>Histoire</h2>
 		</header>
 		<section>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed justo at ligula accumsan hendrerit maximus et nisi. Nam eget ultricies augue, sit amet luctus enim. Maecenas ac blandit quam. Nulla at sollicitudin mi, sit amet condimentum tortor. Vivamus fringilla sapien pulvinar.</p>
-			<ul>
-				<li>Lorem ipsum </li>
-				<li>sit amet
-					<ul>
-						<li>consectetur adipiscing</li>
-						<li>igula a</li>
-					</ul>
-				</li>
-			</ul>
+			
 		</section>
-		<footer>ST72 - Nouvel écran d’enrichissement unique de l’application DEPIL - Jean-Baptiste Lenglet</footer>
+		<footer>Jean-Baptiste Lenglet - Présentation de l'entreprise</footer>
 	</article>
 
 	<article class="slide part-slide">
 		<header>
 			<figure></figure>
 			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
-			<h2>Section title</h2>
+			<h2>Chiffres clés</h2>
 		</header>
 		<section>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed justo at ligula accumsan hendrerit maximus et nisi. Nam eget ultricies augue, sit amet luctus enim. Maecenas ac blandit quam. Nulla at sollicitudin mi, sit amet condimentum tortor. Vivamus fringilla sapien pulvinar.</p>
-			<ul>
-				<li>Lorem ipsum </li>
-				<li>sit amet
-					<ul>
-						<li>consectetur adipiscing</li>
-						<li>igula a</li>
-					</ul>
-				</li>
-			</ul>
+			
 		</section>
-		<footer>ST72 - Nouvel écran d’enrichissement unique de l’application DEPIL - Jean-Baptiste Lenglet</footer>
+		<footer>Jean-Baptiste Lenglet - Présentation de l'entreprise</footer>
 	</article>
 
 	<article class="slide part-title">
@@ -171,10 +151,13 @@
 		}
 
 		for(var i = 0; i < classes.length; i++) {
+			//Add 'from' and 'to' classes
 			if (classes[i-1])
 				slides[i].classList.add("from-" + classes[i-1]);
 			if (classes[i+1])
 				slides[i].classList.add("to-" + classes[i+1]);
+			//Add onscreen-nav class
+			slides[i].classList.add("onscreen-nav");
 		}
 	})();
 

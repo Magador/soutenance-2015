@@ -15,6 +15,10 @@ html {
 	border: none;
 }
 
+#onscreen-nav {
+	padding-top: 2em
+}
+
 /* Timer style */
 
 #timer {
@@ -124,7 +128,7 @@ ul {
 }
 
 .slide li {
-	margin: .1vh;
+	margin: 2vh;
 }
 
 ul > li::before {
@@ -332,8 +336,8 @@ li li::before {
 
 	color: black;
 	text-align: justify;
-	line-height: 4vh;
-	font-size: 3vh;
+	line-height: 6vh;
+	font-size: 5vh;
 
 	/*Transition defaults*/
 	opacity: 1;
