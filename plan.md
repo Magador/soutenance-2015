@@ -3,25 +3,31 @@
 ##Présentation de l'entreprise
 
 - Chiffres clés
+- Présentation du Service (DSIN / SFAC / FJV1 )
 
 ##Présentation du contexte
 
 - Contexte technique, humain, financier
+	- Infoqua
+	- PDS
+	- Population impactée
+	- Coût projet
 
 ##Présentation du sujet
 
 - Thème
-	- Projet d'évolution
+	- Projet d'évolution du PDS
 - Situation de départ
-	- Pas de DDU
+	- Différents écrans de saisie DEPIL
 - Résultats attendus
 	- Planning 
-- Indicateurs de performances
+	- Convergence des écrans de saisie DEPIL avec une mise à jour des technologies
+- Indicateurs de performances ?
 
 ##Démarche, Outils
 
 - Planning prévisionnel
-- Démarche mise en oeuvre, aspects technqiues ou organisationnels
+- Démarche mise en oeuvre, aspects techniques ou organisationnels
 - Eclipse
 
 

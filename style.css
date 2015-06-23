@@ -212,7 +212,9 @@ li li::before {
 
 	line-height: 2vh;
 	font-size: 2vh;
-	color: #666666;
+	color: rgb(102, 102, 102);
+
+	transition: inherit;
 }
 
 .presentation-title section .tutor {
@@ -452,7 +454,6 @@ li li::before {
 .presentation-title:target h1,
 .presentation-title:target .course,
 .presentation-title:target section,
-.presentation-title:target section .class,
 
 .part-title:target h1,
 
