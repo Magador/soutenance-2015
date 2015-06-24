@@ -407,7 +407,12 @@ li li::before {
 	height: 5vh;
 	width: 100vw;
 	opacity: 0;
+	top: 0;
 	background: url("img/PSA_DSIN.png") left center / contain no-repeat white;
+}
+
+.thanks-slide.from-part-slide header .college {
+	margin-top: 5vh;
 }
 
 
