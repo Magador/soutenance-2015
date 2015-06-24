@@ -2,8 +2,9 @@
 
 ##Présentation de l'entreprise
 
+- Fait marquants
 - Chiffres clés
-- Présentation du Service (DSIN / SFAC / FJV1 )
+- Présentation du Service (DSIN / SFAC / FJV1)
 
 ##Présentation du contexte
 

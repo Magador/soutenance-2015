@@ -1,3 +1,16 @@
-* {
-	
+#peugeot-logo {
+	background-image: url("img/Lion_Peugeot_1925.jpg");
+	background-color: transparent;
+}
+
+#psa-logos {
+	background-image: url("img/logos-inline.png");
+	background-color: transparent;
+    width: 35vw;
+    height: 29vh;
+}
+
+#dsin-logo {
+	background-image: url("img/DSIN.png");
+	background-color: white;
 }

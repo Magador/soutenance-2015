@@ -9,10 +9,22 @@ html {
 	overflow: hidden;
 }
 
+h3 {
+	font-weight: bold
+}
+
+small, sup, sub {
+	font-size: smaller
+}
+
 .slide {
 	padding: 0;
 	background: #d9d957;
 	border: none;
+}
+
+.presenter-notes {
+	max-height: none;
 }
 
 #onscreen-nav {
@@ -588,7 +600,7 @@ li li::before {
 }
 
 .part-slide:target header figure {
-	transition: height .5s .5s;
+	transition: height .5s .5s, opacity .5s .5s;
 }
 
 .part-slide:not(:target) section {
