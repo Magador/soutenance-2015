@@ -10,11 +10,11 @@ html {
 }
 
 h3 {
-	font-weight: bold
+	font-weight: bold;
 }
 
 small, sup, sub {
-	font-size: smaller
+	font-size: smaller;
 }
 
 .slide {
@@ -23,12 +23,19 @@ small, sup, sub {
 	border: none;
 }
 
+.slide section img {
+	max-width: 100%;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
 .presenter-notes {
 	max-height: none;
+	background: rgba(255, 255, 255, .8);
 }
 
 #onscreen-nav {
-	padding-top: 2em
+	padding-top: 2em;
 }
 
 /* Timer style */
@@ -167,7 +174,7 @@ li li::before {
 
 .presentation-title header {
 	/* Transisiton defaults */
-	width: 100%
+	width: 100%;
 }
 
 .presentation-title h2.course {
@@ -596,7 +603,7 @@ li li::before {
 /*Part Slide*/
 
 .part-slide:not(:target) {
-	background-color: #d9d957
+	background-color: #d9d957;
 }
 
 .part-slide:not(:target) header figure {
@@ -710,7 +717,7 @@ li li::before {
 }
 
 .thanks-slide.from-part-slide.next figure {
-	height: 0
+	height: 0;
 }
 
 .thanks-slide.from-part-slide.next footer {
