@@ -35,3 +35,9 @@
 ##Résultats obtenus, argumentations, suite
 
 - Planning réalité
+
+##Conclusion
+
+- départ
+- savoir acquis
+- ouverture vers la futur
