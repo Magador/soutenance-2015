@@ -12,24 +12,24 @@
 	- Infoqua
 	- PDS
 	- Population impactée
-	- Coût projet
 
 ##Présentation du sujet
 
-- Thème
-	- Projet d'évolution du PDS
-- Situation de départ
-	- Différents écrans de saisie DEPIL
-- Résultats attendus
-	- Planning 
-	- Convergence des écrans de saisie DEPIL avec une mise à jour des technologies
-- Indicateurs de performances ?
+- Application DEPIL
+	- Definition
+	- Objectifs
+- Projet d'évolution du PDS et de DEPIL
+	- Situation de départ
+		- Différents écrans de saisie DEPIL
+	- Besoins
+	- Résultats attendus
+		- Planning 
+		- Convergence des écrans de saisie DEPIL avec une mise à jour des technologies
 
 ##Démarche, Outils
 
-- Planning prévisionnel
-- Démarche mise en oeuvre, aspects techniques ou organisationnels
-- Eclipse
+- Cycle simplifié
+- Ateliers de développement
 
 
 ##Résultats obtenus, argumentations, suite
