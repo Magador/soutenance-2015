@@ -80,51 +80,12 @@
 
 	<article class="slide part-slide">
 		<header>
-			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
-			<h2>Fait marquants</h2>
-		</header>
-		<section id="psa-history">
-			<figure>
-				<img src="img/logos_peugeot.png">
-				<figcaption>1896</figcaption>
-			</figure>
-			<figure>
-				<img src="img/PSA_Peugeot_Citroen.png">
-				<figcaption>1965</figcaption>
-			</figure>
-			<figure>
-				<img src="img/logos_citroen.png">
-				<figcaption>1976</figcaption>
-			</figure>
-			<figure>
-				<img src="img/DS.png">
-				<figcaption>2014</figcaption>
-			</figure>
-		</section>
-		<footer class="title-of-part">Jean-Baptiste Lenglet - </footer>
-		<div class="presenter-notes">
-			<ul>
-				<li>Fondée le 2 avril 1896 par Armand Peugeot</li>
-				<li>Devient PSA en 1965</li>
-				<li>Fusionne avec Citroën SA en 1976</li>
-				<li>Création de DS en juin 2014</li>
-			</ul>
-		</div>
-	</article>
-
-	<article class="slide part-slide">
-		<header>
 			<figure id="psa-logos"></figure>
 			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
 			<h2>Présentation de l'entreprise</h2>
 		</header>
-		<section>
-			<ul>
-				<li>Présent dans 160 pays</li>
-				<li>184 804 employés</li>
-				<li>2 938 899 véhicules vendus</li>
-				<li>2<sup>ème</sup> constructeur européen</li>
-			</ul>
+		<section class="psa-data">
+			<img src="img/world_map.png">
 		</section>
 		<footer class="title-of-part">Jean-Baptiste Lenglet - </footer>
 		<div class="presenter-notes">
@@ -140,7 +101,7 @@
 			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
 			<h2>Présentation du service</h2>
 		</header>
-		<section class="psa-dsin">
+		<section class="psa-data">
 			<h3>Direction des Systèmes d'INformation</h3>
 			<img src="img/DSIN_tree.png" />
 		</section>
@@ -164,7 +125,7 @@
 			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
 			<h2>Présentation du service</h2>
 		</header>
-		<section class="psa-dsin">
+		<section class="psa-data">
 			<h3>Software Factory</h3>
 			<img src="img/SFSX.png" />
 		</section>
@@ -208,9 +169,39 @@
 		<header>
 			<figure id="dsin-logo"></figure>
 			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
+			<h2>Cycle simplifié</h2>
+		</header>
+		<section class="psa-data data-inline">
+			<img src="img/V_Cycle.svg" width="100%" />
+		</section>
+		<footer class="title-of-part">Jean-Baptiste Lenglet - </footer>
+		<div class="presenter-notes">
+			
+		</div>
+	</article>
+
+	<article class="slide part-slide">
+		<header>
+			<figure id="dsin-logo"></figure>
+			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
+			<h2>Cycle simplifié</h2>
+		</header>
+		<section class="psa-data data-inline">
+			<img src="img/V_Cycle_simplifié.svg" width="100%" />
+		</section>
+		<footer class="title-of-part">Jean-Baptiste Lenglet - </footer>
+		<div class="presenter-notes">
+			
+		</div>
+	</article>
+
+	<article class="slide part-slide">
+		<header>
+			<figure id="dsin-logo"></figure>
+			<aside class="college"><strong>Université de Technologie</strong>De Belfort-Montbéliard</aside>
 			<h2>Plateforme Infoqua</h2>
 		</header>
-		<section class="psa-dsin">
+		<section class="psa-data">
 			<img src="img/INFOQUA.png">
 		</section>
 		<footer class="title-of-part">Jean-Baptiste Lenglet - </footer>
@@ -511,12 +502,6 @@
 	})();
 
 	var slideshow = new SlideShow();
-
-	setTimeout(function() {
-		var css = document.styleSheets[3],
-			slideLen = document.getElementsByClassName("slide").length;
-		css.insertRule("#indicator::after {content:\" / "+slideLen+"\"}", css.cssRules.length);
-	}, 1000);
 
 	/*var snippets = document.querySelectorAll('.snippet');
 	for(var i=0; i<snippets.length; i++) {
