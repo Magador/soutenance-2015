@@ -55,3 +55,10 @@
 .data-inline {
 	flex-flow: row nowrap;
 }
+
+#psa-quality {
+	display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
