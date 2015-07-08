@@ -10,6 +10,11 @@
 	background-color: white;
 }
 
+#seedstack-logo {
+	background-image: url("img/seedstack.svg");
+	background-color: transparent;
+}
+
 #psa-history {
 	display: flex;
 	flex-flow: row wrap;
@@ -61,4 +66,15 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
+}
+
+.layered-images {
+	position: relative;
+}
+
+.layered-images img {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
 }
