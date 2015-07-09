@@ -13,7 +13,7 @@
    preserveAspectRatio="xMidYMid"
    id="svg2"
    version="1.1"
-   sodipodi:docname="V_Cycle_simplifié.svg"
+   sodipodi:docname="test2.svg"
    inkscape:version="0.91 r13725"
    width="100%"
    height="100%">
@@ -39,7 +39,7 @@
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -1319,7 +1319,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1349,12 +1349,6 @@
        style="display:inline"
        transform="translate(135,60.000002)"
        id="g5632-3" />
-    <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#0000ff;stroke-width:6;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Send);filter:url(#filter10384)"
-       d="m 305.2028,82.3622 -255.202805,0 0,80.05701 510.000005,0 0.35355,-79.52668 -260.35965,-0.5"
-       id="path4229"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 110.12499,122.36219 339.67311,0"
@@ -1482,17 +1476,6 @@
          y="1.540061"
          id="tspan5604-5-8"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:100%;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle">Recette utilisateur</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="325.15613"
-       y="76.554581"
-       id="text10522"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan10524"
-         x="325.15613"
-         y="76.554581">Lots</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"

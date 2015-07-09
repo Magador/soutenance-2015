@@ -1192,7 +1192,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1243,12 +1243,6 @@
          inkscape:connector-type="polyline"
          inkscape:connector-curvature="3" />
     </g>
-    <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#0000ff;stroke-width:6;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Send);filter:url(#filter10384)"
-       d="m 305.2028,82.3622 -255.202805,0 0,200 510.000005,0 0.35355,-199.46967 -260.35965,-0.5"
-       id="path4229"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccccc" />
   </g>
   <g
      inkscape:label="Shapes"
@@ -1458,16 +1452,5 @@
          y="1.540061"
          id="tspan5604-5-8"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:100%;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';text-align:center;writing-mode:lr-tb;text-anchor:middle">Recette utilisateur</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="325.15613"
-       y="76.554581"
-       id="text10522"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan10524"
-         x="325.15613"
-         y="76.554581">Lots</tspan></text>
   </g>
 </svg>
